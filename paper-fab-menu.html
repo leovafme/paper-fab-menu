@@ -1,0 +1,142 @@
+<!--
+    The MIT License (MIT)
+	
+	Copyright (c) 2015 Faiz Malkani
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+	Element that provides a Floating Action Menu, triggered by a Floating Action Button
+	
+	#### Example
+	
+    <paper-fab-menu>
+		<span>Description</span>
+		<paper-fab mini></paper-fab>
+		<span>Description</span>
+		<paper-fab mini></paper-fab>
+		<span>Description</span>
+		<paper-fab mini></paper-fab>
+		
+		<paper-fab trigger></paper-fab>
+	</paper-fab-menu>
+	
+	@element paper-fab-menu
+	@blurb Element Element that provides a Floating Action Menu, triggered by a Floating Action Button
+	@status alpha
+	@url faizmalkani.com
+-->
+<polymer-element name="paper-fab-menu">
+	
+	<template>
+		
+		<style>
+			.fab-menu-container
+			{
+			display: flex; 
+			flex-direction: column;
+			align-items: flex-end;
+			position: absolute;
+			}
+			
+			.fab-menu
+			{		
+			margin-right: 8px;
+			display: flex;
+			align-items: flex-end;
+			flex-direction: row !important;
+			}
+			
+			.fab-labels
+			{
+			line-height: 56px;
+			display: flex;
+			text-align: right;
+			margin-right: 1em;
+			flex-direction: column;
+			font-family: sans-serif;
+			}
+			
+			.fab-menu ::content [mini]
+			{
+			margin: 8px 0px 8px 0px;
+			}
+			
+			.fab-menu-container ::content [trigger]
+			{
+			margin-top: 10px;
+			}
+			
+			#fabmenu
+			{
+			opacity: 0;
+			transition: all 0.5s ease;
+			}
+			
+			.fabmenu-visible
+			{
+			opacity: 1 !important;
+			bottom: 0px;	
+			}
+			
+		</style>
+		
+		<div class="fab-menu-container">
+			<div id="fabmenu" class="fab-menu" layout vertical center>
+				<div class="fab-labels">
+					<content select="span"></span>
+				</div>
+				<div layout vertical>
+					<content select="[mini]"></content>
+				</div>
+				
+			</div>
+			<content select="[trigger]" on-click="{{imageClick}}"></content>
+			<content></content>
+		</div>
+		
+	</template>
+	
+	<script>
+		
+		Polymer({
+			/**
+				* The `mini` attribute is inherited from `paper-fab`, and is assigned to the hidden floating action buttons
+				* 
+				* @attribute mini
+				* @type attribute
+				*/
+				
+				/**
+					* The `trigger` attribute is applied to the to the main floating action button, which toggles the hidden ones when clicked.
+					* 
+					* @attribute trigger
+					* @type attribute
+					*/
+					imageClick: function(event, detail, sender) 
+					{ 
+						this.$.fabmenu.classList.toggle('fabmenu-visible');
+					}
+				});
+			</script>
+			
+		</polymer-element>
+		

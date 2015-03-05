@@ -1,0 +1,7 @@
+{
+  "name": "paper-fab-menu",
+  "dependencies": 
+  {
+    "polymer": "Polymer/polymer#master"
+  }
+}
