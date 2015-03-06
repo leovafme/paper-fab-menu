@@ -8,7 +8,9 @@ Paper Fab Menu provides a Floating Action Menu, displaying sub-actions with opti
 
 To get the `paper-fab-menu` component, run the following command:
 
+```
     bower install --save faizmalkani/paper-fab-menu
+```    
     
     
     
