@@ -14,7 +14,7 @@ To get the `paper-fab-menu` component, run the following command:
     
 ## Import
     
-Once the dependencies are resolved, close the command window, open up the HTML file you want to add the `paper-fab-menu` to, and import the component within the `<head>` tag somewhere after importing the Polymer script, like this:
+Once the dependencies are resolved, close the command window, open up the file you want to add the `paper-fab-menu` to, and import the component within the `<head>` tag somewhere after importing the Polymer script, like this:
 
 ```html
    <link rel="import" href="bower_components/paper-fab-menu/paper-fab-menu.html">
