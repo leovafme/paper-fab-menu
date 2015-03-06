@@ -27,15 +27,15 @@ That's it! To use the component, add `<paper-fab-menu></paper-fab-menu>` within 
 Once included, add the *trigger* attribute to the last `paper-fab` and the *mini* attribute to the rest of them. Optionally, you can also provide descriptions for the actions using `<span></span>`. The layout should look something like this:
     
 ```html
-<paper-fab-menu>
-    <span>Description</span>
-    <paper-fab mini icon="description"></paper-fab>
-    <span>Extension</span>
-    <paper-fab mini icon="extension"></paper-fab>
-    <span>Polymer</span>
-    <paper-fab mini icon="polymer"></paper-fab>
-    <span>Folder</span>
-    <paper-fab mini icon="folder"></paper-fab>
-    <paper-fab trigger icon="add"></paper-fab>
-</paper-fab-menu>  
+    <paper-fab-menu>
+        <span>Description</span>
+        <paper-fab mini icon="description"></paper-fab>
+        <span>Extension</span>
+        <paper-fab mini icon="extension"></paper-fab>
+        <span>Polymer</span>
+        <paper-fab mini icon="polymer"></paper-fab>
+        <span>Folder</span>
+        <paper-fab mini icon="folder"></paper-fab>
+        <paper-fab trigger icon="add"></paper-fab>
+    </paper-fab-menu>  
 ```
