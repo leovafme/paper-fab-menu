@@ -1,6 +1,18 @@
 {
   "name": "paper-fab-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "authors": 
+  [ 
+        "Faiz Malkani"
+  ],
+  "description": "Component that provides a Floating Action Menu, triggered by a Floating Action Button",
+  "keywords": [
+    "'Polymer",
+    "web-components",
+    "Material"
+  ],
+  "license": "MIT",
+  "homepage": "http://faizmalkani.com/portfolio/paper-fab-menu/",  
   "dependencies": 
   {
     "polymer": "Polymer/polymer#master"
