@@ -4,6 +4,11 @@ Paper Fab Menu
 
 Paper Fab Menu provides a Floating Action Menu, displaying sub-actions with optional labels that are triggered by a main action `paper-fab`
 
+[Documentation](http://goo.gl/gkXw2j) 
+
+[Demo](http://goo.gl/rnEDzY) 
+
+
 ## Download
 
 To get the `paper-fab-menu` component, run the following command:
