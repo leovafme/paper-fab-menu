@@ -46,3 +46,11 @@ Once included, add the *trigger* attribute to the last `paper-fab` and the *mini
         <paper-fab trigger icon="add"></paper-fab>
     </paper-fab-menu>  
 ```
+
+
+
+
+<br><br><br><br><br>
+
+![Collapsed](http://i.imgur.com/ZRHZAtH.png "Collapsed")
+![Expanded](http://i.imgur.com/JAWwU1d.png "Expanded")
