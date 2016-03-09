@@ -44,7 +44,7 @@
 	@status alpha
 	@url faizmalkani.com
 -->
-<polymer-element name="paper-fab-menu">
+<dom-module name="paper-fab-menu">
 	
 	<template>
 		
@@ -99,6 +99,12 @@
 			bottom: 0px;	
 			}
 			
+			.layout-row {
+			    -webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			    flex-direction: column;
+			}
+			
 		</style>
 		
 		<div class="fab-menu-container">
@@ -111,7 +117,9 @@
 				</div>
 				
 			</div>
-			<content select="[trigger]" on-click="{{imageClick}}"></content>
+			<div on-click="imageClick">
+				<content select="[trigger]" ></content>
+			</div>
 			<content></content>
 		</div>
 		
@@ -120,6 +128,7 @@
 	<script>
 		
 		Polymer({
+			is:'paper-fab-menu',
 			/**
 				* The `mini` attribute is inherited from `paper-fab`, and is assigned to the hidden floating action buttons
 				* 
